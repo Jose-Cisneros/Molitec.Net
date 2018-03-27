@@ -1,0 +1,72 @@
+@model molitec.Data.Descarga
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Descarga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FArribo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FArribo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FDescarga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FDescarga)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Turno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Turno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraDescarga)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HoraDescarga)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bruto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bruto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tara)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tara)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Neto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Neto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraArribo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HoraArribo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

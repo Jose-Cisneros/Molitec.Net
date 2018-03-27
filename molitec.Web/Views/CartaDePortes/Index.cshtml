@@ -1,0 +1,227 @@
+@model IEnumerable<molitec.Data.Models.CartaDePorte>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bruto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaEmi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaVenci)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Neto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PesoEnDestino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KgsEstimado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tara)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aceptada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cosecha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Observaciones)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatenteCamion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PatenteAcoplado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cee)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ctg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tarifa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FletePagado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Conforme)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Condicional)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeclaracionCalidad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KmArecorrer)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chofer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContratoCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Muestra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remitente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Silo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCarta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transporte)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model ) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bruto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEmi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVenci)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Neto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PesoEnDestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KgsEstimado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tara)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aceptada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cosecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatenteCamion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatenteAcoplado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ctg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tarifa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FletePagado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conforme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Condicional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclaracionCalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KmArecorrer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chofer.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContratoCompra.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descarga.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grano.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Muestra.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origen.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remitente.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Silo.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Solicitud.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCarta.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transporte.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,90 @@
+@model molitec.Data.Models.Descarga
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Datos de la descarga</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="contratoCompra_Id" class="col-md-2 control-label"> contrato</label>
+            <div class="col-md-10">
+                <input asp-for="contratoCompra_Id" class="form-control" type="date" />
+                <span asp-validation-for="contratoCompra_Id" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="FArribo" class="col-md-2 control-label"> Fecha arribo</label>
+            <div class="col-md-10">
+                <input asp-for="FArribo" class="form-control" type="date"/>
+                <span asp-validation-for="FArribo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HoraArribo" class="col-md-2 control-label"> Hora de arribo</label>
+            <div class="col-md-10">
+                <input asp-for="HoraArribo" class="form-control" type="time"/>
+                <span asp-validation-for="HoraArribo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FDescarga" class="col-md-2 control-label"> Fecha descarga</label>
+            <div class="col-md-10">
+                <input asp-for="FDescarga" class="form-control" type="date" />
+                <span asp-validation-for="FDescarga" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HoraDescarga" class="col-md-2 control-label"> Hora de descarga</label>
+            <div class="col-md-10">
+                <input asp-for="HoraDescarga" class="form-control" type="time" />
+                <span asp-validation-for="HoraDescarga" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Turno" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Turno" class="form-control" />
+                <span asp-validation-for="Turno" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Bruto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Bruto" class="form-control" />
+                <span asp-validation-for="Bruto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Tara" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Tara" class="form-control" />
+                <span asp-validation-for="Tara" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Neto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Neto" class="form-control" />
+                <span asp-validation-for="Neto" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Observacion" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Observacion" class="form-control" />
+                <span asp-validation-for="Observacion" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+

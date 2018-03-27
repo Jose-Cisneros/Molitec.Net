@@ -1,0 +1,465 @@
+@model molitec.Data.Models.CartaDePorte
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <h4>Datos de la Carta de Porte</h4>
+
+        <div class="form-group" style="display:none;">
+            <label asp-for="ContratoCompraId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ContratoCompraId" class="form-control" asp-items="ViewBag.ContratoCompraId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cee" class="col-md-2 control-label">C.E.E. </label>
+            <div class="col-md-10">
+                <input asp-for="Cee" class="form-control" />
+                <span asp-validation-for="Cee" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Ctg" class="col-md-2 control-label">C.T.G.</label>
+            <div class="col-md-10">
+                <input asp-for="Ctg" class="form-control" />
+                <span asp-validation-for="Ctg" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FechaEmi" class="col-md-2 control-label">Fecha de Emision</label>
+            <div class="col-md-10">
+                <input asp-for="FechaEmi" class="form-control" type="date" />
+                <span asp-validation-for="FechaEmi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FechaVenci" class="col-md-2 control-label">Fecha Vencimiento</label>
+            <div class="col-md-10">
+                <input asp-for="FechaVenci" class="form-control" type="date" />
+                <span asp-validation-for="FechaVenci" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Numero" class="col-md-2 control-label">Numero</label>
+            <div class="col-md-10">
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <h4>Datos del Remitente</h4>
+        <div class="form-group">
+            <label asp-for="RemitenteId" class="col-md-2 control-label">Nombre del remitente</label>
+            <div class="col-md-10">
+                <select asp-for="RemitenteId" class="form-control" asp-items="ViewBag.RemitenteId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+            <div class="col-md-10">
+                <div id="remitente">
+                </div>
+            </div>
+        </div>
+
+
+        <h4>Datos de los Granos Transportados</h4>
+
+
+        <div class="form-group">
+            <label asp-for="GranoId" class="col-md-2 control-label">Grano</label>
+            <div class="col-md-10">
+                <select asp-for="GranoId" class="form-control" asp-items="ViewBag.GranoId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+            <div id="datosGrano">
+
+            </div>
+
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Cosecha" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cosecha" class="form-control" type="date" />
+                <span asp-validation-for="Cosecha" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="KgsEstimado" class="col-md-2 control-label">Kgs Estimados</label>
+            <div class="col-md-10">
+                <input asp-for="KgsEstimado" class="form-control" />
+                <span asp-validation-for="KgsEstimado" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Bruto" class="col-md-2 control-label"> Peso Bruto</label>
+            <div class="col-md-10">
+                <input asp-for="Bruto" class="form-control" />
+                <span asp-validation-for="Bruto" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Neto" class="col-md-2 control-label">Peso Neto</label>
+            <div class="col-md-10">
+                <input asp-for="Neto" class="form-control" />
+                <span asp-validation-for="Neto" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Tara" class="col-md-2 control-label">Peso Tara</label>
+            <div class="col-md-10">
+                <input asp-for="Tara" class="form-control" />
+                <span asp-validation-for="Tara" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DeclaracionCalidad" class="col-md-2 control-label"> Declaracion de Calidad</label>
+            <div class="col-md-10">
+                <input asp-for="DeclaracionCalidad" class="form-control" type="checkbox" />
+                <span asp-validation-for="DeclaracionCalidad" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Conforme" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Conforme" class="form-control" type="checkbox" />
+                <span asp-validation-for="Conforme" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Condicional" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Condicional" class="form-control" type="checkbox" />
+                <span asp-validation-for="Condicional" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PesoEnDestino" class="col-md-2 control-label">Peso en Destino</label>
+            <div class="col-md-10">
+                <input asp-for="PesoEnDestino" class="form-control" type="checkbox" />
+                <span asp-validation-for="PesoEnDestino" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrigenId" class="col-md-2 control-label">Domicilio Origen</label>
+            <div class="col-md-10">
+                <select asp-for="OrigenId" class="form-control" asp-items="ViewBag.OrigenId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+
+            <div id="datosOrigen"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Observaciones" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Observaciones" class="form-control" />
+                <span asp-validation-for="Observaciones" class="text-danger"></span>
+            </div>
+        </div>
+
+        <h4>Datos del destinatario y destino de los granos</h4>
+
+        <div class="form-group">
+            <label asp-for="DestinoId" class="col-md-2 control-label">Domicilio Destino</label>
+            <div class="col-md-10">
+                <select asp-for="DestinoId" class="form-control" asp-items="ViewBag.DestinoId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+
+            <div id="datosDestino"></div>
+        </div>
+
+        <h4>Datos del transporte y del chofer</h4>
+
+        <div class="form-group">
+            <label asp-for="TransporteId" class="col-md-2 control-label">Empresa de Transporte</label>
+            <div class="col-md-10">
+                <select asp-for="TransporteId" class="form-control" asp-items="ViewBag.TransporteId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+            <div id="datosTransporte">
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ChoferId" class="col-md-2 control-label">Chofer</label>
+            <div class="col-md-10">
+                <select asp-for="ChoferId" class="form-control" asp-items="ViewBag.ChoferId">
+                    <option disabled selected>--- SELECCIONAR ---</option>
+                </select>
+            </div>
+            <div id="datosChofer">
+            </div>
+
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PatenteCamion" class="col-md-2 control-label">Patente del camion</label>
+            <div class="col-md-10">
+                <input asp-for="PatenteCamion" class="form-control" />
+                <span asp-validation-for="PatenteCamion" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PatenteAcoplado" class="col-md-2 control-label">Patente del acoplado</label>
+            <div class="col-md-10">
+                <input asp-for="PatenteAcoplado" class="form-control" />
+                <span asp-validation-for="PatenteAcoplado" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="KmArecorrer" class="col-md-2 control-label">Kms a recorrer</label>
+            <div class="col-md-10">
+                <input asp-for="KmArecorrer" class="form-control" />
+                <span asp-validation-for="KmArecorrer" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FletePagado" class="col-md-2 control-label">Flete pagado</label>
+            <div class="col-md-10">
+                <input asp-for="FletePagado" class="form-control" />
+                <span asp-validation-for="FletePagado" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Tarifa" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Tarifa" class="form-control" />
+                <span asp-validation-for="Tarifa" class="text-danger"></span>
+            </div>
+        </div>
+
+        <h4>Datos a completar en el lugar de destino y descarga</h4>
+
+
+
+
+
+        <div class="form-group">
+            <label asp-for="Aceptada" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Aceptada" class="form-control" type="checkbox" />
+                <span asp-validation-for="Aceptada" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="FArribo" class="col-md-2 control-label"> Fecha arribo</label>
+            <div class="col-md-10">
+                <input asp-for="FArribo" class="form-control" type="date" />
+                <span asp-validation-for="FArribo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HoraArribo" class="col-md-2 control-label"> Hora de arribo</label>
+            <div class="col-md-10">
+                <input asp-for="HoraArribo" class="form-control" type="time" />
+                <span asp-validation-for="HoraArribo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FDescarga" class="col-md-2 control-label"> Fecha descarga</label>
+            <div class="col-md-10">
+                <input asp-for="FDescarga" class="form-control" type="date" />
+                <span asp-validation-for="FDescarga" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HoraDescarga" class="col-md-2 control-label"> Hora de descarga</label>
+            <div class="col-md-10">
+                <input asp-for="HoraDescarga" class="form-control" type="time" />
+                <span asp-validation-for="HoraDescarga" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Turno" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Turno" class="form-control" />
+                <span asp-validation-for="Turno" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BrutoFinal" class="col-md-2 control-label">Bruto Final</label>
+            <div class="col-md-10">
+                <input asp-for="BrutoFinal" class="form-control" />
+                <span asp-validation-for="Bruto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TaraFinal" class="col-md-2 control-label">Tara Final</label>
+            <div class="col-md-10">
+                <input asp-for="TaraFinal" class="form-control" />
+                <span asp-validation-for="Tara" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NetoFinal" class="col-md-2 control-label">Neto Final</label>
+            <div class="col-md-10">
+                <input asp-for="NetoFinal" class="form-control" />
+                <span asp-validation-for="Neto" class="text-danger"></span>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Editar" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div>
+    <a href="javascript:void(0);" onclick="history.go(-1);">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#RemitenteId").change(function () {
+
+            var remitenteSelected = $("#RemitenteId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/personapartial",
+                data: { id: remitenteSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#remitente").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+        $("#TransporteId").change(function () {
+
+            var transporteSelected = $("#TransporteId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/personapartial",
+                data: { id: transporteSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#datosTransporte").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+        $("#ChoferId").change(function () {
+
+            var transporteSelected = $("#ChoferId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/personapartial",
+                data: { id: transporteSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#datosChofer").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+        $("#GranoId").change(function () {
+
+            var transporteSelected = $("#GranoId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/granopartial",
+                data: { id: transporteSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#datosGrano").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+
+        $("#OrigenId").change(function () {
+
+            var origenSelected = $("#OrigenId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/domiciliopartial",
+                data: { id: origenSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#datosOrigen").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+
+        $("#DestinoId").change(function () {
+
+            var transporteSelected = $("#DestinoId").val();
+
+            $.ajax({
+                type: "GET",
+                url: "/cartadeportes/domiciliopartial",
+                data: { id: transporteSelected },
+                contentType: "text/html",
+                dataType: "html",
+                success: function (data) {
+                    $("#datosDestino").html(data);
+                },
+                error: function (error) { alert(error); }
+            });
+        });
+
+
+    });
+</script>

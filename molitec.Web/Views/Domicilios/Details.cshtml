@@ -1,0 +1,60 @@
+@model molitec.Data.Domicilio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Domicilio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Calle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Calle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Piso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Piso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Depto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Depto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiscal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fiscal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Localidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Localidad.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,78 @@
+@model molitec.Data.Domicilio
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Domicilio</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Nombre" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Calle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Calle" class="form-control" />
+                <span asp-validation-for="Calle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Numero" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Piso" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Piso" class="form-control" />
+                <span asp-validation-for="Piso" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Depto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Depto" class="form-control" />
+                <span asp-validation-for="Depto" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Fiscal" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Fiscal" class="form-control" />
+                <span asp-validation-for="Fiscal" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LocalidadId" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="LocalidadId" class="form-control" asp-items="ViewBag.LocalidadId"></select>
+                <span asp-validation-for="LocalidadId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

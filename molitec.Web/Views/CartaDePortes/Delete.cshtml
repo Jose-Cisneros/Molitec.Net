@@ -1,0 +1,261 @@
+@model molitec.Data.Models.CartaDePorte
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Esta seguro de eliminar?</h3>
+<div>
+    <h4>Carta De Porte</h4>
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.ContratoCompra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContratoCompra.Numero)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ctg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ctg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEmi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaEmi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVenci)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaVenci)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remitente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Remitente.RazonSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grano.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cosecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cosecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KgsEstimado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KgsEstimado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bruto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bruto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Neto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Neto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tara)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tara)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeclaracionCalidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeclaracionCalidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Conforme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Conforme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Condicional)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Condicional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PesoEnDestino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PesoEnDestino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Origen.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destino.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chofer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chofer.RazonSocial)
+        </dd>
+        <dt>
+            Empresa de Transporte
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transporte.RazonSocial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatenteCamion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatenteCamion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatenteAcoplado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PatenteAcoplado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KmArecorrer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KmArecorrer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FletePagado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FletePagado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarifa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarifa)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aceptada)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aceptada)
+        </dd>
+
+        <dt>
+            Fecha Arribo
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FArribo)
+        </dd>
+
+        <dt>
+            Hora Arribo
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HoraArribo)
+        </dd>
+
+        <dt>
+            Fecha Descarga
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FDescarga)
+        </dd>
+        <dt>
+            Hora Descarga
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HoraDescarga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Turno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Turno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BrutoFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BrutoFinal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaraFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaraFinal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NetoFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NetoFinal)
+        </dd>
+
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <a href="javascript:void(0);" onclick="history.go(-1);">Volver</a>
+        </div>
+    </form>
+</div>

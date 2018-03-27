@@ -1,0 +1,68 @@
+@model molitec.Data.Models.ContratoCompra
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Contrato de Compra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt>
+            Tipo
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnidadCantidadGrano.Descripcion)
+        </dd>
+
+        <dt>
+            Fecha de creacion
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt>
+            Fecha Limite
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaLimite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt>
+            Estado
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCartaPorte.Descripcion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productor.Nombre)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index">Volver</a>
+</div>

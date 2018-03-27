@@ -1,0 +1,22 @@
+@model molitec.Data.Models.Persona
+
+<div>
+    
+    <hr />
+    <dl class=" col-md-offset-2 col-md-3" style="border-style:solid;border-radius:5px;border-color:black;border-width:0.1em">
+        <dt>Datos:</dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cuit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RazonSocial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RazonSocial)
+        </dd>
+    </dl>
+</div>
+

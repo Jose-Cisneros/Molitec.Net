@@ -1,0 +1,83 @@
+@model IEnumerable<molitec.Data.Descarga>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FArribo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FDescarga)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Turno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoraDescarga)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bruto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tara)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Neto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoraArribo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Observacion)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FArribo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FDescarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Turno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraDescarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bruto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tara)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Neto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraArribo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

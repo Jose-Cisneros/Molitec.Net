@@ -1,0 +1,89 @@
+@model molitec.Data.Models.ContratoCompra
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ContratoCompra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="Id" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaLimite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaLimite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Toneladas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Toneladas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoCartaPorte)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoCartaPorte.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LiquidacionFinal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LiquidacionFinal.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LiquidacionParcial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LiquidacionParcial.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productor.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnidadCantidadGrano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnidadCantidadGrano.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

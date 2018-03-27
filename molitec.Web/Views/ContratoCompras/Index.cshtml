@@ -1,0 +1,33 @@
+@model IEnumerable<molitec.Data.Models.ContratoCompra>
+
+@{
+    ViewData["Title"] = "Contratos Abiertos";
+}
+
+<h2>Contratos Abiertos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Numero)
+                </th>
+      
+    </thead>
+    <tbody>
+@foreach (var item in Model.Where(i=>i.EstadoCartaPorteId==1)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            
+            <td>
+         
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-controller="cartadeportes" asp-action="PorContrato" asp-route-id="@item.Id">Ver Cartas de porte</a> |
+                <a asp-controller="cartadeportes" asp-action="create" asp-route-id="@item.Id">Agregar Carta de porte</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
